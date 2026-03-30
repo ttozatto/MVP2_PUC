@@ -69,6 +69,8 @@ O servidor inicia em `http://localhost:5000` após a execução dos testes.
 
 Abra o arquivo `frontend/index.html` diretamente no navegador. O formulário consome a API em `http://localhost:5000`.
 
+<img width="576" height="921" alt="image" src="https://github.com/user-attachments/assets/6518dfda-de94-4d7d-a6a0-c22d11767098" />
+
 ## Endpoints da API
 
 ### `GET /options`
