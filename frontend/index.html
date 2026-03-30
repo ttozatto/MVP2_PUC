@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Previsão de Burnout</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Previsão de Nível de Burnout</h1>
+    <p class="subtitle">Preencha os dados abaixo para obter uma previsão do seu nível de burnout.</p>
+
+    <form id="burnout-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="idade">Idade</label>
+          <input type="number" id="idade" name="idade" min="18" max="100" required>
+        </div>
+        <div class="form-group">
+          <label for="genero">Gênero</label>
+          <select id="genero" name="genero" required>
+            <option value="" disabled selected>Selecione...</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="continente">Continente</label>
+          <select id="continente" name="continente" required>
+            <option value="" disabled selected>Selecione...</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="industria">Indústria</label>
+          <select id="industria" name="industria" required>
+            <option value="" disabled selected>Selecione...</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="cargo">Cargo</label>
+          <select id="cargo" name="cargo" required>
+            <option value="" disabled selected>Selecione...</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="regime_trabalho">Regime de Trabalho</label>
+          <select id="regime_trabalho" name="regime_trabalho" required>
+            <option value="" disabled selected>Selecione...</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="faixa_salarial">Faixa Salarial Anual</label>
+          <select id="faixa_salarial" name="faixa_salarial" required>
+            <option value="" disabled selected>Selecione...</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="horas_trabalho_semana">Horas de Trabalho por Semana</label>
+          <input type="number" id="horas_trabalho_semana" name="horas_trabalho_semana" min="1" max="168" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="equilibrio_trabalho_vida">Equilíbrio Trabalho–Vida</label>
+          <div class="range-wrapper">
+            <input type="range" id="equilibrio_trabalho_vida" name="equilibrio_trabalho_vida" min="1" max="5" value="3">
+            <span class="range-value" id="equilibrio_valor">3</span>
+          </div>
+          <div class="range-hints">
+            <span>1 — Ruim</span>
+            <span>5 — Excelente</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="isolamento_social">Nível de Isolamento Social</label>
+          <div class="range-wrapper">
+            <input type="range" id="isolamento_social" name="isolamento_social" min="1" max="5" value="3">
+            <span class="range-value" id="isolamento_valor">3</span>
+          </div>
+          <div class="range-hints">
+            <span>1 — Nenhum</span>
+            <span>5 — Extremo</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group full-width">
+        <label>Problemas de Saúde</label>
+        <div id="problemas_saude" class="checkbox-group"></div>
+      </div>
+
+      <button type="submit" id="btn-submit">Obter Previsão</button>
+    </form>
+
+    <div id="resultado" class="resultado hidden">
+      <h2>Resultado</h2>
+      <div id="resultado-nivel" class="resultado-nivel"></div>
+      <div id="resultado-detalhes" class="resultado-detalhes"></div>
+    </div>
+
+    <div id="erro" class="erro hidden"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
